@@ -4,7 +4,9 @@ require('dotenv').config();
 
 const signupRouter = require('./auth/signup')
 const loginRouter = require('./auth/login')
-const {auth} = require('./util')
+const detailsRouter = require('./details/details')
+
+const {auth , handleUploadProject} = require('./util')
 
 const app = express();
 
@@ -16,9 +18,12 @@ app.get('/' , (req , res) => {
 
 app.use('/auth/signup' , signupRouter)
 app.use('/auth/login' , loginRouter)
+app.use('/details' , auth , detailsRouter)
+app.post('/upload-project', auth , handleUploadProject)
 
 app.get('/me' , auth , (req , res) => {
-    return res.json({message : 'You are logged in'})
+    console.log(req.user);
+    return res.json({ message : 'You are logged in' })
 })
 
 const startServer = async () => {

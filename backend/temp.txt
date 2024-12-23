@@ -1,1 +1,22 @@
 https://web-dev-cohort.notion.site/COHORT-3-WEB-DEV-SLIDES-3fdd102e713643c9b2e05488cd004aab
+
+
+
+{
+  "project_name": "Blockchain in healthcare",
+  "project_lead_name": "Mahad",
+  "description": "Hi I am Mahad",
+  "skills": [
+    "Python",
+    "Machine learning",
+    "MAtlab",
+    "sklearn"
+  ],
+  "city": "Kolkata",
+  "status": "ongoing",
+  "members": [
+    "maithili.kumar.bt27@heritageit.edu.in"
+  ],
+  "github_link": "",
+  "project_index": 1
+},

@@ -4,11 +4,12 @@ const { User } = require('../db/user.model')
 const signupRouter = express.Router();
 
 signupRouter.post('/' , async (req , res) => {
-    const {email , password} = req.body;
+    const {email , password , name} = req.body;
     try{
         await User.create({
             email,
-            password
+            password,
+            name
         })
         console.log('user created')
     }

@@ -13,10 +13,11 @@ loginRouter.post('/' , async (req , res) => {
         })
         if(userdetails){
             if(password == userdetails.password){
+                
                 const token = jwt.sign({
                     id: userdetails._id
                 }, process.env.JWT_SECRET);
-                
+
                 return res.send({
                     token: token
                 })
